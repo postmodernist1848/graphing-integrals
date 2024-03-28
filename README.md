@@ -11,6 +11,8 @@
   4. Random
 - Zoom in/out and move graphs with mouse and Ctrl/Shift
 
+TODO:
+- [ ] add expression parser to input functions
 
 ### Build
 ```console
