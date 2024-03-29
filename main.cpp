@@ -47,7 +47,7 @@ void draw_dash_dotted_line(float start_x, float start_y, float end_x, float end_
 
 void display (Function *f, Vector2 offset, Vector2 scale) {
     f->plot(GRAY, offset, scale);
-    f->draw_description(30, 30, 30, GRAY);
+    f->draw_description(30, 30, 30, BLACK);
 }
 
 // 1)  f(x) = x^2     [1,   2]
