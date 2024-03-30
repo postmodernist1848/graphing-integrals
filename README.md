@@ -1,6 +1,5 @@
 # Graphing integrals
-
-![image](https://github.com/postmodernist1848/graphing-integrals/assets/101038833/74028bdd-f2fa-439f-9df1-97122ea946ac)
+![image2](https://github.com/postmodernist1848/graphing-integrals/assets/101038833/3116ba97-cd69-4495-beed-b216e6e009f5)
 
 ## Features
 - Calculate definite integrals of a set of functions (extendable) with Riemann sums using interactive UI
