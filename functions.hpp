@@ -1,9 +1,9 @@
 #pragma once
+#include <cstdio>
 #include <raylib.h>
 #include <cmath>
 #include <vector>
 #include <random>
-#include <iostream>
 
 extern int screen_width, screen_height;
 
@@ -51,8 +51,9 @@ struct Function {
                     break;
             }
             integration_ys[i] = evaluate_at(x);
-            value += integration_ys[i] / n; // y * 1/n
+            value += integration_ys[i] * (r - l) / n;
         }
+        printf("integral from %f to %f is %f\n", l, r, value);
     }
 
     void plot(Color color, Vector2 offset, Vector2 scale) {
@@ -159,7 +160,7 @@ struct Exponent : Function {
 
 struct Sin2 : Function {
     double evaluate_at(double x) override {
-        return std::sin(2*x);
+        return std::sin(2.0*x);
     }
     const char *name() override {
         return "y = sin(2x)";

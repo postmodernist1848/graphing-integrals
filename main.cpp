@@ -1,7 +1,6 @@
 #include <cmath>
 #include <cstdio>
 #include <raylib.h>
-#include <iostream>
 #include "functions.hpp"
 #define RAYGUI_IMPLEMENTATION
 #define RAYGUI_CUSTOM_ICONS
@@ -119,7 +118,7 @@ int main() {
         if (IsKeyPressed(KEY_THREE)) integration_method = Function::MIDDLE;
         if (IsKeyPressed(KEY_FOUR)) integration_method = Function::RANDOM;
 
-        current_function->integrate(l, r, 10, integration_method);
+        current_function->integrate(l, r, 15, integration_method);
 
         BeginDrawing();
             ClearBackground(RAYWHITE);
@@ -158,7 +157,11 @@ int main() {
             const float b_y = t_y + bt_size;
 
             const Rectangle sf_button {l_x, t_y, bt_size, bt_size};
-            if (GuiButton(sf_button, GuiIconText(ICON_WAVE_SINUS, NULL))) current_function = &s2;
+            if (GuiButton(sf_button, GuiIconText(ICON_WAVE_SINUS, NULL))) {
+                current_function = &s2;
+                l = 0.0;
+                r = M_PI / 2.0;
+            }
             const Rectangle qp_button {r_x, t_y, bt_size, bt_size};
             if (GuiButton(qp_button, GuiIconText(ICON_QUADRATIC, NULL))) current_function = &s;
             const Rectangle pp_button {l_x, b_y, bt_size, bt_size};
